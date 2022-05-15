@@ -1,0 +1,33 @@
+api-version: 2019-12-01
+location: westus
+name: App_streamlit
+properties:
+  containers:
+  - name: streamlitapp
+    properties:
+      image: mrobot0.azurecr.io/mrobot_demo:v1
+      ports:
+      - port: 80
+        protocol: TCP
+      - port: 443
+        protocol: TCP
+      resources:
+        requests:
+          cpu: 1.0
+          memoryInGB: 1.5
+  imageRegistryCredentials:
+  - server: mrobot0.azurecr.io
+    username: mrobot0
+    password: K+btN/d9/Z1bERUwZyc7OiCfdPIkfYr/
+  restartPolicy: Never
+  ipAddress:
+    ports:
+    - port: 443
+      protocol: TCP
+    - port: 80
+      protocol: TCP
+    type: Public
+    dnsNameLabel: musicalRobot0
+  osType: Linux
+tags: null
+type: Microsoft.ContainerInstance/containerGroups
