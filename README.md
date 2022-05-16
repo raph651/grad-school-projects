@@ -27,7 +27,7 @@ My graduate study includes topics in Machine Learning, Deep learning, and Scient
 
 A project that helps identify the genre of an mp3 music file and discover music of similar genres. See the demo at: https://www.youtube.com/watch?v=6ErHy6OuTg4 or simply try it yourself on the website http://musicalrobot0.westus.azurecontainer.io/ !
 
-In this project, I collaboted with three classmates to develop a web app named musical robot. The first task was to collect raw music data (mp3 files and their attributes).
+In this project, I collaboted with three classmates to develop a web app named musical robot. The first task was to collect raw music data (mp3 files and their attributes). We downloaded a set of 8,000 song clips of 30 seconds from Free Music Archieve. These song files were well trimmed and each contained the highlight part of the song to keep the genre characteristics from it. Only 8 labels were considered for classification task, because there was a diversity of genre labels and most genre were overlapping.   
 
 --- 
 ### Application of Fokas' Method 
