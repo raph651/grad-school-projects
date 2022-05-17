@@ -22,12 +22,18 @@ My graduate study includes topics in Machine Learning, Deep learning, and Scient
 ---
 ### Musical Robot
 <div class="verticalhorizontal">
-    <img src="https://user-images.githubusercontent.com/91817346/168462109-775d4377-eb91-42da-ad46-148480049309.png" width ="300" height="290" alt="centered image" />
+    <img src="https://user-images.githubusercontent.com/91817346/168760849-5bde27df-2750-4ca2-923b-d3ece403f06a.png" width ="550" height="325" alt="centered image" />
 </div>
 
 A project that helps identify the genre of an mp3 music file and discover music of similar genres. See the demo at: https://www.youtube.com/watch?v=6ErHy6OuTg4 or simply try it yourself on the website http://musicalrobot0.westus.azurecontainer.io/ !
 
-In this project, I collaboted with three classmates to develop a web app named musical robot. The first task was to collect raw music data (mp3 files and their attributes). We downloaded a set of 8,000 song clips of 30 seconds from Free Music Archieve. These song files were well trimmed and each contained the highlight part of the song to keep the genre characteristics from it. Only 8 labels were considered for classification task, because there was a diversity of genre labels and most genre were overlapping.   
+In this project, I collaboted with three classmates to develop a web app named musical robot. The first task was to collect raw music data (mp3 files and their attributes). We downloaded a set of 8,000 song clips of 30 seconds from Free Music Archieve. These song files were well trimmed and each contained the highlight part of the song to keep the genre characteristics from it. Only 8 labels were considered for classification task, because there was a diversity of genre labels and most genre were overlapping. All the song file were decomposited to sprectromgram and mel-frequencies. These features were mapped and trained by a SVM model for superivised learning. 
+
+I utilized streamlit to develop a website app that interacted with user. The algorithm flow was first asking the user to upload a music file. This file would be decomposited into the features we have mapped. Once these features were input into our SVM model, the most matching genre would be returned and showed to the user. User would have the opportunity to learn and listen to similar songs in that genre. The interaction would ended after user no longer needed the service. 
+
+Since this prototype would play similar songs based on the user input, a repository of song files were needed. However, it was not realistic or convenient for users if they had to download all the song files (about 8 GB) in order to use this service. So I worked on deploying this app to cloud hosting site. I utilized Docker to containerize the app. After the image was built, an instance was created on Microsoft Azure platform. Another Nginx file was added to reroute to Streamlit app port and to handle HTTP requests. Then this instance was deployed to Azure cloud so that user could access to the app service directly by internet.
+
+
 
 --- 
 ### Application of Fokas' Method 
