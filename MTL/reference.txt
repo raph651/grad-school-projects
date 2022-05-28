@@ -1,0 +1,25 @@
+An Overview of Multi-Task Learning in Deep Neural Networks. Sebastian Ruder, 2017.
+-Survey
+
+Multi-Task Deep Learning Approach for Simultaneous Objective Response Prediction and Tumor Segmentation in HCC Patients with Transarterial Chemoembolization
+Yuze Li,1,† Ziming Xu,1,† Chao An,2 Huijun Chen,1,* and Xiao Li3,*
+Youxin Wang, Academic Editor and Ming Feng, Academic Editor
+
+MultiTask-CenterNet (MCN): Efficient and Diverse Multitask Learning using an Anchor Free Approach. Falk Heuer, Sven Mantowsky, Syed Saqib Bukhari, Georg Schneider. 2018. 
+-Segmentation, human pose prediciton.
+
+End-to-End Multi-Task Learning with Attention. Shikun Liu, Edward Johns, Andrew J. Davison 2019. 
+- (MTAN architecture) paper and github
+
+A Closer Look At Loss Weighting In Multi-Task Learning. Baijiong Lin, Feiyang Ye, and Yu Zhang. 2021.
+- RLW (Randon Loss Weighting weighting approach)
+
+LibMTL: A Python Library for Multi-Task Learning. Baijiong Liu. 2022. 
+- python library
+
+@article{LibMTL,
+  title={LibMTL: A Python Library for Multi-Task Learning},
+  author={Baijiong Lin and Yu Zhang},
+  journal={arXiv preprint arXiv:2203.14338},
+  year={2022}
+}
