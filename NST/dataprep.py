@@ -1,15 +1,19 @@
-import os
-from torch.utils.data import Dataset
+"""
+Prepare the dataset for NST
+"""
 from PIL import Image
-import torch
 import torchvision.transforms as T
 
 def rescale(x):
+    r"""Rescale function for transform back
+    """
     low,high = x.min(),x.max()
     x_rescaled = (x-low)/(high-low)
     return x_rescaled
 
 def transform_back(img):
+    r"""Define tensor to image transform
+    """
     trfb = T.Compose([
       T.Lambda(lambda x: x[0]),
       T.Normalize(mean=[0, 0, 0], std=[4.3668, 4.4643, 4.4444]),
@@ -19,19 +23,24 @@ def transform_back(img):
   ])
     return trfb(img)
 
-
-
-
-class NST_data(object):
+class NSTdata():
+    r"""Return the transformed image tensors of styler and content image.
+    Args:
+        styler_path (str): The path to styler image
+        image_path (str): The path to content image
+        styler_size (int/tuple): The size for styler image resize
+        img_size (int/tuple): The size for content image resize
+    """
     def __init__(self, styler_path, image_path, styler_size, img_size):
-        
+
         self.sp=styler_path
         self.ip=image_path
         self.styler_size =styler_size
         self.img_size = img_size
-        
+
     def transform(self,img,size):
-        
+        r"""Define image to tensor transform
+        """
         trf = T.Compose([
       T.Resize(size),
       T.ToTensor(),
@@ -39,13 +48,12 @@ class NST_data(object):
       T.Lambda(lambda x: x[None]),
   ])
         return trf(img)
-       
-    
-    
-    
+
     def build(self):
+        r"""Return the transformed styler and content image
+        """
         styler=Image.open(self.sp)
-        
+
         image=Image.open(self.ip)
-        
+
         return self.transform(styler, self.styler_size), self.transform(image, self.img_size)
