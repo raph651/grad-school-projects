@@ -26,7 +26,7 @@ My graduate study includes topics in Machine Learning, Deep learning, and Scient
   *Topics*: deep learning, recurrent nueral networks (RNNs), gated recurrent unit (GRU), long short-term memory (LSTM)
 
 ---
-### Musical Robot
+### Musical Robot &nbsp;  [repo link](https://github.com/raph651/grad-school-projects/tree/main/musical_robot)
 <div class="verticalhorizontal">
     <img src="https://user-images.githubusercontent.com/91817346/168760849-5bde27df-2750-4ca2-923b-d3ece403f06a.png" width ="550" height="325" alt="centered image" />
 </div>
@@ -40,7 +40,7 @@ I utilized Streamlit to develop a website app that interacted with the user. The
 Since this prototype would play similar songs based on the user input, a repository of song files were needed. However, it was not realistic or convenient for users if they had to download all the song files (about 8 GB) to use this service. So I worked on deploying this app to a cloud hosting site. I utilized Docker to containerize the app. After I built the image, I  created an instance on the Microsoft Azure platform. Another Nginx file was added to reroute to Streamlit app port and to handle HTTP requests. Then this instance was deployed to the Azure cloud so that users could access the app service directly via the internet.
 
 ---
-### Multi-task Learning (MTL) in Deep Learning
+### Multi-task Learning (MTL) in Deep Learning &nbsp;  [repo link](https://github.com/raph651/grad-school-projects/tree/main/MTL) &nbsp; [poster link]()
 <div class="verticalhorizontal">
     <img src="https://user-images.githubusercontent.com/91817346/170816526-8f7d6d93-fa28-4972-95b7-cbd28f2c075f.png" width ="750" height="325" alt="centered image" />
 </div>
@@ -58,7 +58,7 @@ It is noted that even though the three tasks are related intuitively, each task 
 </div>
 
 --- 
-### Application of Fokas' Method 
+### Application of Fokas' Method &nbsp;  [repo link](https://github.com/raph651/grad-school-projects/tree/main/Application%20of%20method%20of%20Fokas)
 <div class="verticalhorizontal">
     <img style="float: left;" src="Application of method of Fokas/3.PNG" width ="425" height="320" alt="centered image" />
     <img style="float: right;" src="Application of method of Fokas/2.PNG" width ="400" height="290" alt="centered image" />
@@ -81,7 +81,7 @@ The first part is to collect screenshots and assign location labels for each one
 The second part is to implement a NN model with YOLOv5 toolkit. More details on this later.
 
 ---
-### DCGAN on training machine to writte digits 
+### DCGAN on training machine to writte digits &nbsp;  [repo link](https://github.com/raph651/grad-school-projects/tree/main/DCGAN)
 
 A project that adopts the deep convolutional adversarial network (DCGAN) trains the machine to write MNIST hand-written digits. The network consists of two core parts: a discriminator that distinguishes between real and machine-generated(fake) images of hand-written digits and a generator that produces fake images from random noise.
 
@@ -95,7 +95,7 @@ The losses for the discriminator and the generator decrease significantly at the
 </div>
 
 ---
-### Neural Style Transfer 
+### Neural Style Transfer &nbsp;  [repo link](https://github.com/raph651/grad-school-projects/tree/main/NST)
 <div class="verticalhorizontal">
     <img style="float: left;" src="NST/images/tubingen.jpg" width ="300" height="240" alt="centered image" />
     <img style="float: right;" src="NST/images/styler/starry_night.jpg" width ="300" height="240" alt="centered image" />
@@ -121,6 +121,6 @@ The Neural Style Transfer (NST) method optimizes the whole content image by taki
 </div>
 
 ---
-### Stock Price Prediciton
+### Stock Price Prediciton &nbsp;  [repo link](https://github.com/raph651/grad-school-projects/tree/main/stocks_price_prediction)
 
 
