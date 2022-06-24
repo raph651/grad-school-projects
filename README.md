@@ -24,7 +24,9 @@ My graduate study includes topics in Machine Learning, Deep learning, and Scient
 * **Stock Price Prediction**<br>
   *Technologies*: Python, Pytorch, Numpy<br>
   *Topics*: deep learning, recurrent nueral networks (RNNs), gated recurrent unit (GRU), long short-term memory (LSTM)
-
+* **AutoEncoders & VAEs**<br>
+  *Technologies*: Python, Pytorch, Numpy, Scipy<br>
+  *Topics*: AutoEncoders, latent space, CNNs/RNNs, variational autoencoders (VAEs), KL-divergence, PCA
 ---
 ### Musical Robot &nbsp;  [repo link](https://github.com/raph651/grad-school-projects/tree/main/musical_robot)
 <div class="verticalhorizontal">
@@ -122,5 +124,34 @@ The Neural Style Transfer (NST) method optimizes the whole content image by taki
 
 ---
 ### Stock Price Prediciton &nbsp;  [repo link](https://github.com/raph651/grad-school-projects/tree/main/stocks_price_prediction)
+<div class="verticalhorizontal">
+    <img style="float: left;" src="https://user-images.githubusercontent.com/91817346/175645343-5b597c13-52a2-46e8-90ac-5adb0c37073a.png" width ="333" height="280" alt="centered image" />
+    <img style="float: center;" src="https://user-images.githubusercontent.com/91817346/175645375-f2f64399-66ed-4b24-99f8-d14625723990.png" width ="333" height="280" alt="centered image" />
+    <img style="float: right;" src="https://user-images.githubusercontent.com/91817346/175645397-aa588de2-5c00-4e8b-aeb0-f2280df7307c.png" width ="333" height="280" alt="centered image" />
+  
+</div>
 
+This project aims to train Recurrent Neural Networks (RNNs) to learn the tendency and fluctuation in a stock's price and predict the price for the last 100 days. The stock price datasets used are Tesla, Google, and Dow Jones (see picture above, Tesla-left, Google-center, Dow Jones-right). 
 
+We want the neural networks to predict prices from the past, but only base on a most recent period (for example, 100 days). So we implement many-to-one type of RNNs, which means that the model predicts a single day's price after analyzing the prior 100 days of data. The last 100 days' prediction relies on the previously self-predicted value from the model itself, so the 100 days' ground-truth prices are invisible during the test. In such a case, we use gated structures like GRU and LSTM to allow the model to have long-term memories of the past. 
+
+It is noted that the RNN models are quite sensitive to input, so data normalization is required at the beginning. All the data is min-max normalized to the interval (0,1). Another factor to consider is diminishing/vanishing gradients in the RNN models. To avoid this issue, we use GRU/LSTM structures and detach the hidden states during forward pass. The detaching procedure keeps the hidden states but doesn't compute their gradients, significantly improving the prediction results. The model is not stable for large stock price dataset, for example, the Dow Jones' 8000+ days stock price dataset. The memories required might be high-demanding. The predictions will become less efficient. So we trim the dataset, keeping the last 4000 days for training and testing.
+Furthermore, we think it could be better to include a teacher-forcing scheme during training. The teach-forcing scheme teaches the model to rely on the model-predicted value instead of the ground-truth value. This makes the model beneficial for remembering the predicted value in long-terms.
+
+---
+### AutoEncoders & VAEs &nbsp; [repo link](https://github.com/raph651/grad-school-projects/tree/main/AutoEncoders)
+<div class="verticalhorizontal">
+    <img src="https://user-images.githubusercontent.com/91817346/175666624-7e1a8e95-d0e4-4866-87c8-c890f8c8f918.png" width ="650" height="350" alt="centered image" />
+</div>
+
+AutoEncoders consist of two parts, encoder and decoder. The encoder encodes the input data into a low-dimensional latent space. Decoder transforms back from latent space to original space. The loss is evaluated on the difference between input and output. Generally, it is one method of unsupervised learning. 
+
+In this project, the MNIST hand-written digits dataset is used. I first build an autoencoder that has the CNN architecture as encoder and decoder. The encoder has 2 conv layers and 2 FC layers, encoding input to a 576-sized latent vector. The decoder has a reversed architecture as encoder's. The loss is evaluated based on pixel-wise MSE between input and output. 
+
+In the second part, I implement a VAE such that the latent variable consists of the mean and variance (log) of guassian distribution. The encoder has the same CNN architecture as before, but two different set of FC layers correspond to means and variances respectively. A random variable is generated from gaussian distribution. Then I reparametrize the variable to latent Gaussian. Finally, the decoder transforms the latent Gaussain to original space. The total loss is evaluated based on the mixture of MSE loss and KL-divergence, the later being an measure of how two distribution differ from each other. It is noted that the KL-divergence is bigger in magnitude since all input from a batch is considered in calculation and not averaged. In contrast, the MSE loss is averaged. So I normalize and rescale the KL-divergence to ensure better performance. 
+
+AEs and VAEs are useful in clustering. Putting input into latent space, I use the first two PCA coordinates to decompose the latent variable. The visualization is clear in seeing the separation between different clusters of hand-written digits. And the separation is more visible comparing to the separation by PCA in original space. VAEs can also generate new hand-written digits by sampling randon gaussian variables and decoding them to original space. The input and output is shown above. The generated images of hand-written digits are shown below. 
+
+<div class="verticalhorizontal">
+    <img src="https://user-images.githubusercontent.com/91817346/175666545-2e912cf4-8ff4-433e-9616-3282f6021572.png" width ="550" height="350" alt="centered image" />
+</div>
