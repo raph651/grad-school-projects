@@ -44,7 +44,7 @@ Since this prototype would play similar songs based on the user input, a reposit
 ---
 ### Multi-task Learning (MTL) in Deep Learning &nbsp;  [repo link](https://github.com/raph651/grad-school-projects/tree/main/MTL) &nbsp; [poster link](https://github.com/raph651/grad-school-projects/blob/main/MTL/Raphael_Liu%20Poster.pptx)
 <div class="verticalhorizontal">
-    <img src="https://user-images.githubusercontent.com/91817346/170816526-8f7d6d93-fa28-4972-95b7-cbd28f2c075f.png" width ="750" height="325" alt="centered image" />
+    <img src="https://user-images.githubusercontent.com/91817346/175667684-05ad54e5-d6c8-4784-8098-5a16248d28ae.png" width ="750" height="325" alt="centered image" />
 </div>
 
 This project aims to explore the most recent topics in Multi-Task Learning (MTL) and implement some of the most state-of-the-art MTL models, such as MTAN and PeaceGAN. Also, I want to analyze the impact of different weighting methods setting such as Random Loss Weighting and Impartial Multi-Task Learning.
