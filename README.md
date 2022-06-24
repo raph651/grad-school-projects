@@ -42,7 +42,7 @@ I utilized Streamlit to develop a website app that interacted with the user. The
 Since this prototype would play similar songs based on the user input, a repository of song files were needed. However, it was not realistic or convenient for users if they had to download all the song files (about 8 GB) to use this service. So I worked on deploying this app to a cloud hosting site. I utilized Docker to containerize the app. After I built the image, I  created an instance on the Microsoft Azure platform. Another Nginx file was added to reroute to Streamlit app port and to handle HTTP requests. Then this instance was deployed to the Azure cloud so that users could access the app service directly via the internet.
 
 ---
-### Multi-task Learning (MTL) in Deep Learning &nbsp;  [repo link](https://github.com/raph651/grad-school-projects/tree/main/MTL) &nbsp; [poster link]()
+### Multi-task Learning (MTL) in Deep Learning &nbsp;  [repo link](https://github.com/raph651/grad-school-projects/tree/main/MTL) &nbsp; [poster link](https://github.com/raph651/grad-school-projects/blob/main/MTL/Raphael_Liu%20Poster.pptx)
 <div class="verticalhorizontal">
     <img src="https://user-images.githubusercontent.com/91817346/170816526-8f7d6d93-fa28-4972-95b7-cbd28f2c075f.png" width ="750" height="325" alt="centered image" />
 </div>
