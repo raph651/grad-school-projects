@@ -1,7 +1,7 @@
 # Raphael Liu grad-school-projects
 
 
-My graduate study includes topics in Machine Learning, Deep learning, and Scientific Computing. Here are some of the projects I've done so far, with details below.
+My graduate study includes topics in Machine Learning, Deep learning, Reinforcement Learning, and Scientific Computing. Here are some of the projects I've done so far, with details below.
   
 * **Musical Robot, music genere prediction app** <br>
   *Technologies*: Python, Pytorch, Tensorflow, Streamlit, Docker, Azure, Nginx<br>
@@ -9,6 +9,9 @@ My graduate study includes topics in Machine Learning, Deep learning, and Scient
 * **Multi-task Learning (MTL) in Deep Learning**<br>
   *Technologies*: Python, Pytorch, Numpy, <br>
   *Topics*: deep learning, MTL, convolutional neural networks (CNNs), object detection, classification
+* **Best-BlackJack Player AI**<br>
+  *Technologies*: Python, PyTorch, PySwarms, NumPy
+  *Topics*: deep Q reinforcement learning, experience replay, monte carlo tree search (MCTS), particle swarm optimization (PSO), cross entropy method (CEM)
 * **Application of Method of Fokas**<br>
   *Technologies*: Matlab<br>
   *Topics*: advanced PDEs, method of Fokas, complex analysis 
