@@ -7,10 +7,10 @@ My graduate study includes topics in Machine Learning, Deep learning, Reinforcem
   *Technologies*: Python, Pytorch, Tensorflow, Streamlit, Docker, Azure, Nginx<br>
   *Topics*: machine learning, classification, support vector machine (SVM), time-series, principal component analysis (PCA)
 * **Multi-task Learning (MTL) in Deep Learning**<br>
-  *Technologies*: Python, Pytorch, Numpy, <br>
+  *Technologies*: Python, Pytorch, Numpy<br>
   *Topics*: deep learning, MTL, convolutional neural networks (CNNs), object detection, classification
 * **Best-BlackJack Player AI**<br>
-  *Technologies*: Python, PyTorch, PySwarms, NumPy
+  *Technologies*: Python, PyTorch, PySwarms, NumPy<br>
   *Topics*: deep Q reinforcement learning, experience replay, monte carlo tree search (MCTS), particle swarm optimization (PSO), cross entropy method (CEM)
 * **Application of Method of Fokas**<br>
   *Technologies*: Matlab<br>
